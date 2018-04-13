@@ -2,7 +2,6 @@ package com.goldlogic.jiadianxi.fragment;
 
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -21,7 +20,7 @@ import com.goldlogic.jiadianxi.subFragment.ProductListFragment;
 import com.goldlogic.jiadianxi.subFragment.ProductSuperFragment;
 import com.goldlogic.jiadianxi.subFragment.ProductVIPFragment;
 import com.goldlogic.jiadianxi.subFragment.ProductYearFragment;
-import com.goldlogic.jiadianxi.util.MyApplication;
+import com.goldlogic.jiadianxi.util.AppNetConfig;
 import com.goldlogic.jiadianxi.util.UIUtils;
 import com.squareup.picasso.Picasso;
 import com.viewpagerindicator.TabPageIndicator;
@@ -62,7 +61,6 @@ public class InvestFragment extends BaseFragment {
     ViewPager vpInvest;
 
 
-
     @Override
     protected void initData() {
 
@@ -77,6 +75,7 @@ public class InvestFragment extends BaseFragment {
     private List<Fragment> fragmentList = new ArrayList<>();
 
     private MyAdapter adapter;
+
     private void initFragments() {
         //1.加载4个不同的Fragment
         ProductListFragment productListFragment = new ProductListFragment();
@@ -96,6 +95,7 @@ public class InvestFragment extends BaseFragment {
         tabpageInvest.setViewPager(vpInvest);
 
     }
+
     class MyAdapter extends FragmentPagerAdapter {
 
 
@@ -120,7 +120,7 @@ public class InvestFragment extends BaseFragment {
         }
     }
 
-
+    ArrayList<String> imagesUrl = new ArrayList<>(3);
 
     @Override
     public int getLayoutId() {
@@ -128,17 +128,28 @@ public class InvestFragment extends BaseFragment {
     }
 
     private void setBanner() {
+
+
+        //-------------------------------------------------------------------------
+
         //设置banner样式
         banner.setBannerStyle(BannerConfig.NOT_INDICATOR);
         //设置图片加载器
         banner.setImageLoader(new GlideImageLoader());
-        //设置图片地址构成的集合
-        Uri uri = Uri.parse("android.resource://" + MyApplication.context.getPackageName() + "/" + R.mipmap.banner);
-        ArrayList<Uri> imagesUrl = new ArrayList<Uri>(3);
-        //三张一样的图片
-        imagesUrl.add(uri);
-        imagesUrl.add(uri);
-        imagesUrl.add(uri);
+
+
+        //设置网络图片地址构成的集合
+
+
+
+//        本地图片
+//        Uri uri = Uri.parse("android.resource://" + MyApplication.context.getPackageName() + "/" + R.mipmap.banner);
+//        ArrayList<Uri> imagesUrl = new ArrayList<Uri>(3);
+//        //三张一样的图片
+//        imagesUrl.add(uri);
+//        imagesUrl.add(uri);
+//        imagesUrl.add(uri);
+
         banner.setImages(imagesUrl);
         //设置banner动画效果
         banner.setBannerAnimation(Transformer.DepthPage);
@@ -159,10 +170,12 @@ public class InvestFragment extends BaseFragment {
         @Override
         public void displayImage(Context context, Object path, ImageView imageView) {
             //Picasso 加载图片简单用法
-            Picasso.with(context).load((Uri) path).into(imageView);
+            Picasso.with(context).load((String) path).into(imageView);
+//            Picasso.with(context).load((Uri) path).into(imageView);
 
         }
     }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -177,5 +190,10 @@ public class InvestFragment extends BaseFragment {
     public void onDestroyView() {
         super.onDestroyView();
         ButterKnife.unbind(this);
+    }
+
+    @Override
+    protected String getUrl() {
+        return AppNetConfig.BASE_URL;
     }
 }

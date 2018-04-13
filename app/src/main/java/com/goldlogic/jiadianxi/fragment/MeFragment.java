@@ -23,4 +23,9 @@ public class MeFragment extends BaseFragment {
     public int getLayoutId() {
         return R.layout.fragment_me;
     }
+
+    @Override
+    protected String getUrl() {
+        return null;
+    }
 }

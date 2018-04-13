@@ -8,6 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.goldlogic.jiadianxi.bean.Product;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import butterknife.ButterKnife;
 
 /**
@@ -16,6 +21,9 @@ import butterknife.ButterKnife;
 public abstract class BaseFragment extends Fragment {
 
     public Context context;
+    //装后台传过来的数据
+    public List<Product> productList = new ArrayList<>();
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -24,6 +32,7 @@ public abstract class BaseFragment extends Fragment {
         ButterKnife.bind(BaseFragment.this, view);
         return view;
     }
+
 
     //初始化界面的数据
     protected abstract void initData();
@@ -39,4 +48,9 @@ public abstract class BaseFragment extends Fragment {
         super.onDestroyView();
         ButterKnife.unbind(this);
     }
+
+
+    protected abstract String getUrl();
+
+
 }

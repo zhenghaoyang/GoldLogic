@@ -1,15 +1,19 @@
 package com.goldlogic.jiadianxi.subFragment;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.alibaba.fastjson.JSON;
 import com.goldlogic.jiadianxi.R;
 import com.goldlogic.jiadianxi.adapter.ProductAdapter;
 import com.goldlogic.jiadianxi.bean.Product;
 import com.goldlogic.jiadianxi.fragment.BaseFragment;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,20 +31,58 @@ public class ProductListFragment extends BaseFragment {
     @Bind(R.id.lv_product_list_all)
     ListView lvProductListAll;
     //装后台传过来的数据
-    private List<Product> productList = new ArrayList<>();
+    List<Product> productList = new ArrayList<>();
+    ArrayList<String> imagesUrl = new ArrayList<>(6);
+    Product product = null;
+    private ProductAdapter productAdapter;
 
     @Override
     protected void initData() {
 
-        //数据
-        Product product = new Product();
-        productList.add(product);
-        productList.add(product);
-        productList.add(product);
-        //适配器
-        ProductAdapter productAdapter = new ProductAdapter(context, productList);
-        lvProductListAll.setAdapter(productAdapter);//显示列表
+//        praseJson();
 
+
+
+
+
+
+//        //数据
+//        Product product = new Product();
+//        productList.add(product);
+//        productList.add(product);
+//        productList.add(product);
+        //适配器
+
+
+    }
+
+    private void praseJson() {
+
+        String url = "https://h5.jiadianxi.com/taskapi/getlist";
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.get(url, new AsyncHttpResponseHandler() {
+            @Override
+            public void onSuccess(String content) {
+
+                productList = JSON.parseArray(content, Product.class);
+                for (int index = 0; index < productList.size(); index++) {
+                    product = productList.get(index);
+                    productList.add(product);
+                    Log.d("Howy", "onSuccess: " + product.toString());
+                }
+//                productAdapter = new ProductAdapter(context, productList);
+//                lvProductListAll.setAdapter(productAdapter);//显示列表
+
+
+                Log.d("Howy", "onSuccess: " + productList + productList.size());
+            }
+
+            @Override
+            public void onFailure(Throwable error, String content) {
+
+
+            }
+        });
     }
 
     @Override
@@ -66,6 +108,11 @@ public class ProductListFragment extends BaseFragment {
     public void onDestroyView() {
         super.onDestroyView();
         ButterKnife.unbind(this);
+    }
+
+    @Override
+    protected String getUrl() {
+        return null;
     }
 
 

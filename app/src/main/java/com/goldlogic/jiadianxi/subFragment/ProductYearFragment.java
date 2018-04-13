@@ -38,4 +38,9 @@ public class ProductYearFragment extends BaseFragment {
     public int getLayoutId() {
         return R.layout.fragment_product_year;
     }
+
+    @Override
+    protected String getUrl() {
+        return null;
+    }
 }

@@ -25,6 +25,7 @@ public class ProductAdapter extends BaseAdapter {
     private List<Product> productList;
     private Context context;
     private String TAG = "howy";
+    private Product product;
 
 
     public ProductAdapter(Context context, List<Product> productList) {
@@ -61,13 +62,19 @@ public class ProductAdapter extends BaseAdapter {
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-        //装配数据
-        Product product = productList.get(0);
-        holder.tvTag.setText(product.tag);
+//        装配数据
+//        for (int i = 0; i < 3; i++) {
+            product = productList.get(0);
+            Log.d(TAG, "product: " + product + productList);
+            holder.tvTag.setText(product.getTag());
 //        holder.ivCompanyLogo.setImageBitmap(Bitmap.createBitmap());
-        holder.tvInvestLevel.setText(product.investLevel);
-        holder.tvCompanyBackground.setText(product.companyBackground);
-        holder.tvYearInterest.setText(product.yearInverest);
+            holder.tvInvestLevel.setText(product.getExt6());
+            Log.d(TAG, "getView: " + product.getExt6());
+            holder.tvCompanyBackground.setText(product.companyBackground);
+            holder.tvYearInterest.setText(product.yearInverest);
+//        }
+
+
         return convertView;
     }
 

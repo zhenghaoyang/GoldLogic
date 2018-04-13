@@ -39,4 +39,9 @@ public class ProductVIPFragment extends BaseFragment {
     public int getLayoutId() {
         return R.layout.fragment_product_vip;
     }
+
+    @Override
+    protected String getUrl() {
+        return null;
+    }
 }

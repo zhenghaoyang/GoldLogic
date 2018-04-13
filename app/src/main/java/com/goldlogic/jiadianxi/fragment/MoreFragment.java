@@ -23,4 +23,9 @@ public class MoreFragment extends BaseFragment {
     public int getLayoutId() {
         return R.layout.fragment_more;
     }
+
+    @Override
+    protected String getUrl() {
+        return null;
+    }
 }

@@ -39,4 +39,9 @@ public class ProductSuperFragment extends BaseFragment {
     public int getLayoutId() {
         return R.layout.fragment_product_super;
     }
+
+    @Override
+    protected String getUrl() {
+        return null;
+    }
 }

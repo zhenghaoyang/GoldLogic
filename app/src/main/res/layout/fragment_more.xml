@@ -11,15 +11,16 @@
 
         <ImageView
             android:id="@+id/iv_raw"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/right_raw" />
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/left_raw" />
 
     </LinearLayout>
 
 
     <LinearLayout
-        android:id="@+id/ll_data"
+        android:id="@+id/ll_"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -28,11 +29,11 @@
             android:id="@+id/tv_data"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="20dp"
             android:gravity="center_vertical"
             android:text="更多"
             android:textColor="@color/fragment_me_text"
-            android:textSize="14sp" />
+            android:textSize="20sp" />
 
         <TextView
 
@@ -107,9 +108,9 @@
 
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_margin="20dp"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -117,15 +118,83 @@
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:layout_weight="1"
-                android:src="@mipmap/qq_kefu" />
+                android:src="@mipmap/gongzhonghao" />
 
             <TextView
                 android:id="@+id/qqkf"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="QQ客服"
+                android:text="公众号"
                 android:textColor="@color/fragment_me_text" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_weight="1"
+                android:src="@mipmap/xinrenzhinan" />
+
+            <TextView
+
+                android:id="@+id/tv_xinrenzhinan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="新人指南"
+                android:textColor="@color/fragment_me_text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_weight="1"
+                android:src="@mipmap/qq_qun" />
+
+            <TextView
+
+                android:id="@+id/qqq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QQ群"
+                android:textColor="@color/fragment_me_text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_weight="1"
+                android:src="@mipmap/qq_kefu" />
+
+            <TextView
+
+                android:id="@+id/tv_qqq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QQ客服"
+                android:textColor="@color/fragment_me_text" />
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
