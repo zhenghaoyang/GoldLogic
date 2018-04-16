@@ -2,15 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="100dp"
+    android:layout_margin="5dp"
     android:background="@android:color/white"
     android:orientation="vertical">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/divider_line" />
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:background="@color/divider_line" />-->
 
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -23,17 +25,17 @@
             android:layout_marginLeft="20dp"
             android:layout_weight="1"
             android:text="新单|VIP"
-            android:textColor="@color/black"
+            android:textColor="@color/text_press"
             android:textSize="16sp" />
 
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:background="@color/divider_line" />
+    <!--  <View
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:layout_marginLeft="15dp"
+          android:layout_marginRight="15dp"
+          android:background="@color/divider_line" />-->
 
 
     <LinearLayout
@@ -50,7 +52,7 @@
                 android:id="@+id/iv_company_logo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/text_press" />
+                android:background="@color/white" />
         </LinearLayout>
 
         <LinearLayout
@@ -66,7 +68,8 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="投资档位" />
+                android:text="投资档位"
+                android:textColor="#b3000000" />
 
             <TextView
                 android:id="@+id/tv_company_background"
@@ -75,7 +78,8 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="公司背景" />
+                android:text="公司背景"
+                android:textColor="#66000000" />
 
 
         </LinearLayout>
@@ -98,22 +102,22 @@
                 android:textSize="25sp" />
 
             <TextView
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="最高年化" />
+                android:text="最高年化"
+                android:textColor="#66000000" />
         </LinearLayout>
 
 
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/divider_line" />
+    <!--  <View
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/divider_line" />-->
 </LinearLayout>
 
 

@@ -11,6 +11,7 @@
         android:text="4"
         android:textSize="35dp" />
     <ListView
+        android:divider="@null"
         android:id="@+id/lv_product_list_vip"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></ListView>

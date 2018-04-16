@@ -3,16 +3,26 @@
     android:shape="rectangle"
     android:useLevel="true">
 
-<!--    <item android:width="345dp" android:height="33dp">
-        <shape android:shape="rectangle">
-            <stroke android:width="1dp" android:color="#56b3f3" />
-            <corners android:radius="17dp" />
-        </shape>
-    </item>-->
-    <stroke
-        android:width="1dp"
-        android:color="#56b3f3" />
+    <!--    <item android:width="345dp" android:height="33dp">
+            <shape android:shape="rectangle">
+                <stroke android:width="1dp" android:color="#56b3f3" />
+                <corners android:radius="17dp" />
+            </shape>
+        </item>-->
 
-    <corners android:radius="17dp" />
-    <solid android:color="@color/white" />
+
+    <shape android:shape="rectangle">
+        <stroke
+            android:width="0dp"
+            android:color="#56b3f3" />
+        <corners android:radius="16dp" />
+    </shape>
+
+    <!--椭圆形-->
+    <!--    <stroke
+            android:width="1dp"
+            android:color="#56b3f3" />
+
+        <corners android:radius="17dp" />
+        <solid android:color="@color/white" />-->
 </shape>

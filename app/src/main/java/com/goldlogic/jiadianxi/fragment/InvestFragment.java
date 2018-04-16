@@ -16,7 +16,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.goldlogic.jiadianxi.R;
-import com.goldlogic.jiadianxi.subFragment.ProductListFragment;
 import com.goldlogic.jiadianxi.subFragment.ProductSuperFragment;
 import com.goldlogic.jiadianxi.subFragment.ProductVIPFragment;
 import com.goldlogic.jiadianxi.subFragment.ProductYearFragment;
@@ -78,12 +77,12 @@ public class InvestFragment extends BaseFragment {
 
     private void initFragments() {
         //1.加载4个不同的Fragment
-        ProductListFragment productListFragment = new ProductListFragment();
+//        ProductListFragment productListFragment = new ProductListFragment();
         ProductSuperFragment productRecommondFragment = new ProductSuperFragment();
         ProductYearFragment productHotFragment = new ProductYearFragment();
         ProductVIPFragment productVIPFragment = new ProductVIPFragment();
         //添加到集合中
-        fragmentList.add(productListFragment);
+//        fragmentList.add(productListFragment);
         fragmentList.add(productRecommondFragment);
         fragmentList.add(productHotFragment);
         fragmentList.add(productVIPFragment);
@@ -139,6 +138,7 @@ public class InvestFragment extends BaseFragment {
 
 
         //设置网络图片地址构成的集合
+
 
 
 

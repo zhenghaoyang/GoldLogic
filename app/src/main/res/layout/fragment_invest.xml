@@ -229,24 +229,25 @@
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="vertical"
-                android:layout_margin="5dp"
                 android:id="@+id/ll_tab_viewpager"
+
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-            <com.viewpagerindicator.TabPageIndicator
-                android:id="@+id/tabpage_invest"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/tab_indicator_background"></com.viewpagerindicator.TabPageIndicator>
+                <com.viewpagerindicator.TabPageIndicator
+                    android:id="@+id/tabpage_invest"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/tab_indicator_background"></com.viewpagerindicator.TabPageIndicator>
 
-            <android.support.v4.view.ViewPager
-                android:id="@+id/vp_invest"
-                android:layout_width="match_parent"
-                android:layout_height="900dp"
-                android:background="@color/white"></android.support.v4.view.ViewPager>
 
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vp_invest"
+                    android:layout_width="match_parent"
+                    android:layout_height="1000dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/white"></android.support.v4.view.ViewPager>
             </LinearLayout>
         </LinearLayout>
 

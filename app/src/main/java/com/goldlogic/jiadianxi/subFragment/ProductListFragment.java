@@ -15,7 +15,6 @@ import com.goldlogic.jiadianxi.fragment.BaseFragment;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
@@ -31,29 +30,15 @@ public class ProductListFragment extends BaseFragment {
     @Bind(R.id.lv_product_list_all)
     ListView lvProductListAll;
     //装后台传过来的数据
-    List<Product> productList = new ArrayList<>();
-    ArrayList<String> imagesUrl = new ArrayList<>(6);
-    Product product = null;
+//    List<Product> productList = new ArrayList<>();
+//    ArrayList<String> imagesUrl = new ArrayList<>(6);
+//    Product product = null;
     private ProductAdapter productAdapter;
 
     @Override
     protected void initData() {
-
-//        praseJson();
-
-
-
-
-
-
-//        //数据
-//        Product product = new Product();
-//        productList.add(product);
-//        productList.add(product);
-//        productList.add(product);
-        //适配器
-
-
+        //解析Json数据
+        praseJson();
     }
 
     private void praseJson() {
@@ -64,16 +49,19 @@ public class ProductListFragment extends BaseFragment {
             @Override
             public void onSuccess(String content) {
 
-                productList = JSON.parseArray(content, Product.class);
-                for (int index = 0; index < productList.size(); index++) {
-                    product = productList.get(index);
-                    productList.add(product);
-                    Log.d("Howy", "onSuccess: " + product.toString());
-                }
-//                productAdapter = new ProductAdapter(context, productList);
-//                lvProductListAll.setAdapter(productAdapter);//显示列表
 
+                //List<User> users2 = JSON.parseArray(jsonString2, User.class);
+                List<Product> productList = JSON.parseArray(content, Product.class);
 
+//                Log.d("Howy", "onSuccess: " + productList);
+//                for (int index = 0; index < productList.size(); index++) {
+//                    product = productList.get(index);
+//                    productList.add(product);
+//                    Log.d("Howy", "---------------------------------" + index + product.toString());
+//                }
+
+                productAdapter = new ProductAdapter(context, productList);
+                lvProductListAll.setAdapter(productAdapter);//显示列表
                 Log.d("Howy", "onSuccess: " + productList + productList.size());
             }
 

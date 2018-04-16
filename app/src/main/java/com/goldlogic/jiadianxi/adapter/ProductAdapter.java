@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import com.goldlogic.jiadianxi.R;
 import com.goldlogic.jiadianxi.bean.Product;
+import com.goldlogic.jiadianxi.util.AppNetConfig;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -22,7 +24,7 @@ import butterknife.ButterKnife;
 
 public class ProductAdapter extends BaseAdapter {
 
-    private List<Product> productList;
+    List<Product> productList;
     private Context context;
     private String TAG = "howy";
     private Product product;
@@ -36,7 +38,7 @@ public class ProductAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return productList == null ? 0 : productList.size() + 1;
+        return productList == null ? 0 : productList.size();
     }
 
     @Override
@@ -62,18 +64,21 @@ public class ProductAdapter extends BaseAdapter {
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-//        装配数据
-//        for (int i = 0; i < 3; i++) {
-            product = productList.get(0);
-            Log.d(TAG, "product: " + product + productList);
-            holder.tvTag.setText(product.getTag());
-//        holder.ivCompanyLogo.setImageBitmap(Bitmap.createBitmap());
-            holder.tvInvestLevel.setText(product.getExt6());
-            Log.d(TAG, "getView: " + product.getExt6());
-            holder.tvCompanyBackground.setText(product.companyBackground);
-            holder.tvYearInterest.setText(product.yearInverest);
+//
+//            装配数据
+//        if (position > 5) {
+//            return convertView;
 //        }
-
+        product = productList.get(position);
+        holder.tvTag.setText(product.getTag());
+//            holder.ivCompanyLogo.setImageBitmap(Bitmap.createBitmap(product.getLogoPic()));
+        String path = AppNetConfig.IMG_URL + product.getLogoPic();
+        Log.d(TAG, "path: " + path);
+        Picasso.with(context).load((String) path).into(holder.ivCompanyLogo);
+        holder.tvInvestLevel.setText(product.getExt6());
+        holder.tvCompanyBackground.setText("" + product.getSimpleDescription());
+        holder.tvTag.setText(product.getExt4());
+        holder.tvYearInterest.setText(product.getAllYearRate());
 
         return convertView;
     }

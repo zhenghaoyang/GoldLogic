@@ -6,16 +6,6 @@ package com.goldlogic.jiadianxi.bean;
 
 public class Product {
 
-    public String tag = "新旧单";
-
-    public String companyLogoUrl = "////";
-
-    public String investLevel = "投15000";
-
-    public String companyBackground = "五百强";
-
-    public String yearInverest = "300%";
-
 
     /**
      * TaskId : 1800
@@ -199,5 +189,29 @@ public class Product {
 
     public void setPeriod(String Period) {
         this.Period = Period;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "TaskId=" + TaskId +
+                ", Name='" + Name + '\'' +
+                ", LogoPic='" + LogoPic + '\'' +
+                ", AddInterest='" + AddInterest + '\'' +
+                ", AllYearRate='" + AllYearRate + '\'' +
+                ", ReinvestAward=" + ReinvestAward +
+                ", Score=" + Score +
+                ", SimpleDescription=" + SimpleDescription +
+                ", Tag='" + Tag + '\'' +
+                ", YearRate=" + YearRate +
+                ", IsYear=" + IsYear +
+                ", Ext2='" + Ext2 + '\'' +
+                ", Ext1='" + Ext1 + '\'' +
+                ", Ext4='" + Ext4 + '\'' +
+                ", Ext6='" + Ext6 + '\'' +
+                ", Mystery=" + Mystery +
+                ", Released=" + Released +
+                ", Period='" + Period + '\'' +
+                '}';
     }
 }
