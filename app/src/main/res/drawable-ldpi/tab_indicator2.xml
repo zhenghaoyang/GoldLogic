@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--&lt;!&ndash;左&ndash;&gt;-->
+    <!--<item android:width="87dp" android:height="33dp">-->
+    <!--<shape android:shape="rectangle">-->
+    <!--<corners android:bottomLeftRadius="16dp" android:bottomRightRadius="0dp" android:topLeftRadius="16dp" android:topRightRadius="0dp" />-->
+    <!--<solid android:color="#56b3f3" />-->
+    <!--</shape>-->
+    <!--</item>-->
+
+    <!--    &lt;!&ndash;中&ndash;&gt;
+        <item android:drawable="@android:color/transparent" android:state_pressed="false" android:state_selected="false" />
+        <item android:drawable="@android:color/transparent" android:state_pressed="true" android:state_selected="false" />
+        <item android:drawable="@color/title_text" android:state_pressed="false" android:state_selected="true" />
+        <item android:drawable="@color/title_text" android:state_pressed="true" android:state_selected="true" />-->
+
+    <!--右-->
+    <item android:width="87dp" android:height="33dp">
+        <shape android:shape="rectangle">
+            <corners android:bottomLeftRadius="0dp" android:bottomRightRadius="16dp" android:topLeftRadius="0dp" android:topRightRadius="16dp" />
+            <solid android:color="#56b3f3" />
+        </shape>
+    </item>
+</selector>

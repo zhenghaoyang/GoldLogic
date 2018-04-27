@@ -4,16 +4,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="4"
-        android:textSize="35dp" />
-    <ListView
-        android:divider="@null"
+
+    <com.goldlogic.jiadianxi.ui.WrapContentListView
         android:id="@+id/lv_product_list_vip"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></ListView>
+        android:layout_height="match_parent"
+        android:divider="@null"></com.goldlogic.jiadianxi.ui.WrapContentListView>
 </LinearLayout>
 

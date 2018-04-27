@@ -28,8 +28,11 @@ int attr vpiCirclePageIndicatorStyle 0x7f04001a
 int attr vpiIconPageIndicatorStyle 0x7f04001b
 int attr vpiLinePageIndicatorStyle 0x7f04001c
 int attr vpiTabPageIndicatorStyle 0x7f04001d
-int attr vpiTitlePageIndicatorStyle 0x7f04001e
-int attr vpiUnderlinePageIndicatorStyle 0x7f04001f
+int attr vpiTabPageIndicatorStyle0 0x7f04001e
+int attr vpiTabPageIndicatorStyle1 0x7f04001f
+int attr vpiTabPageIndicatorStyle2 0x7f040020
+int attr vpiTitlePageIndicatorStyle 0x7f040021
+int attr vpiUnderlinePageIndicatorStyle 0x7f040022
 int bool default_circle_indicator_centered 0x7f050001
 int bool default_circle_indicator_snap 0x7f050002
 int bool default_line_indicator_centered 0x7f050003
@@ -67,13 +70,14 @@ int dimen default_title_indicator_footer_padding 0x7f08000a
 int dimen default_title_indicator_text_size 0x7f08000b
 int dimen default_title_indicator_title_padding 0x7f08000c
 int dimen default_title_indicator_top_padding 0x7f08000d
-int drawable vpi__tab_indicator 0x7f090001
-int drawable vpi__tab_selected_focused_holo 0x7f090002
-int drawable vpi__tab_selected_holo 0x7f090003
-int drawable vpi__tab_selected_pressed_holo 0x7f090004
-int drawable vpi__tab_unselected_focused_holo 0x7f090005
-int drawable vpi__tab_unselected_holo 0x7f090006
-int drawable vpi__tab_unselected_pressed_holo 0x7f090007
+int drawable tab3 0x7f090001
+int drawable vpi__tab_indicator 0x7f090002
+int drawable vpi__tab_selected_focused_holo 0x7f090003
+int drawable vpi__tab_selected_holo 0x7f090004
+int drawable vpi__tab_selected_pressed_holo 0x7f090005
+int drawable vpi__tab_unselected_focused_holo 0x7f090006
+int drawable vpi__tab_unselected_holo 0x7f090007
+int drawable vpi__tab_unselected_pressed_holo 0x7f090008
 int id bottom 0x7f0c0001
 int id none 0x7f0c0002
 int id top 0x7f0c0003
@@ -129,10 +133,13 @@ int styleable UnderlinePageIndicator_fadeDelay 1
 int styleable UnderlinePageIndicator_fadeLength 2
 int styleable UnderlinePageIndicator_fades 3
 int styleable UnderlinePageIndicator_selectedColor 4
-int[] styleable ViewPagerIndicator { 0x7f04001a, 0x7f04001b, 0x7f04001c, 0x7f04001d, 0x7f04001e, 0x7f04001f }
+int[] styleable ViewPagerIndicator { 0x7f04001a, 0x7f04001b, 0x7f04001c, 0x7f04001d, 0x7f04001e, 0x7f04001f, 0x7f040020, 0x7f040021, 0x7f040022 }
 int styleable ViewPagerIndicator_vpiCirclePageIndicatorStyle 0
 int styleable ViewPagerIndicator_vpiIconPageIndicatorStyle 1
 int styleable ViewPagerIndicator_vpiLinePageIndicatorStyle 2
 int styleable ViewPagerIndicator_vpiTabPageIndicatorStyle 3
-int styleable ViewPagerIndicator_vpiTitlePageIndicatorStyle 4
-int styleable ViewPagerIndicator_vpiUnderlinePageIndicatorStyle 5
+int styleable ViewPagerIndicator_vpiTabPageIndicatorStyle0 4
+int styleable ViewPagerIndicator_vpiTabPageIndicatorStyle1 5
+int styleable ViewPagerIndicator_vpiTabPageIndicatorStyle2 6
+int styleable ViewPagerIndicator_vpiTitlePageIndicatorStyle 7
+int styleable ViewPagerIndicator_vpiUnderlinePageIndicatorStyle 8

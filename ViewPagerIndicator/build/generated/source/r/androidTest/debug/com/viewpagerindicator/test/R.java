@@ -220,14 +220,35 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int vpiTitlePageIndicatorStyle=0x7f01001d;
+    public static final int vpiTabPageIndicatorStyle0=0x7f01001d;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int vpiUnderlinePageIndicatorStyle=0x7f01001e;
+    public static final int vpiTabPageIndicatorStyle1=0x7f01001e;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int vpiTabPageIndicatorStyle2=0x7f01001f;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int vpiTitlePageIndicatorStyle=0x7f010020;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int vpiUnderlinePageIndicatorStyle=0x7f010021;
   }
   public static final class bool {
     public static final int default_circle_indicator_centered=0x7f020000;
@@ -273,13 +294,14 @@ public final class R {
     public static final int default_title_indicator_top_padding=0x7f04000c;
   }
   public static final class drawable {
-    public static final int vpi__tab_indicator=0x7f050000;
-    public static final int vpi__tab_selected_focused_holo=0x7f050001;
-    public static final int vpi__tab_selected_holo=0x7f050002;
-    public static final int vpi__tab_selected_pressed_holo=0x7f050003;
-    public static final int vpi__tab_unselected_focused_holo=0x7f050004;
-    public static final int vpi__tab_unselected_holo=0x7f050005;
-    public static final int vpi__tab_unselected_pressed_holo=0x7f050006;
+    public static final int tab3=0x7f050000;
+    public static final int vpi__tab_indicator=0x7f050001;
+    public static final int vpi__tab_selected_focused_holo=0x7f050002;
+    public static final int vpi__tab_selected_holo=0x7f050003;
+    public static final int vpi__tab_selected_pressed_holo=0x7f050004;
+    public static final int vpi__tab_unselected_focused_holo=0x7f050005;
+    public static final int vpi__tab_unselected_holo=0x7f050006;
+    public static final int vpi__tab_unselected_pressed_holo=0x7f050007;
   }
   public static final class id {
     public static final int bottom=0x7f060000;
@@ -893,6 +915,9 @@ public final class R {
      * <tr><td><code>{@link #ViewPagerIndicator_vpiIconPageIndicatorStyle com.viewpagerindicator.test:vpiIconPageIndicatorStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #ViewPagerIndicator_vpiLinePageIndicatorStyle com.viewpagerindicator.test:vpiLinePageIndicatorStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #ViewPagerIndicator_vpiTabPageIndicatorStyle com.viewpagerindicator.test:vpiTabPageIndicatorStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ViewPagerIndicator_vpiTabPageIndicatorStyle0 com.viewpagerindicator.test:vpiTabPageIndicatorStyle0}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ViewPagerIndicator_vpiTabPageIndicatorStyle1 com.viewpagerindicator.test:vpiTabPageIndicatorStyle1}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ViewPagerIndicator_vpiTabPageIndicatorStyle2 com.viewpagerindicator.test:vpiTabPageIndicatorStyle2}</code></td><td></td></tr>
      * <tr><td><code>{@link #ViewPagerIndicator_vpiTitlePageIndicatorStyle com.viewpagerindicator.test:vpiTitlePageIndicatorStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #ViewPagerIndicator_vpiUnderlinePageIndicatorStyle com.viewpagerindicator.test:vpiUnderlinePageIndicatorStyle}</code></td><td></td></tr>
      * </table>
@@ -900,12 +925,16 @@ public final class R {
      * @see #ViewPagerIndicator_vpiIconPageIndicatorStyle
      * @see #ViewPagerIndicator_vpiLinePageIndicatorStyle
      * @see #ViewPagerIndicator_vpiTabPageIndicatorStyle
+     * @see #ViewPagerIndicator_vpiTabPageIndicatorStyle0
+     * @see #ViewPagerIndicator_vpiTabPageIndicatorStyle1
+     * @see #ViewPagerIndicator_vpiTabPageIndicatorStyle2
      * @see #ViewPagerIndicator_vpiTitlePageIndicatorStyle
      * @see #ViewPagerIndicator_vpiUnderlinePageIndicatorStyle
      */
     public static final int[] ViewPagerIndicator={
         0x7f010019, 0x7f01001a, 0x7f01001b, 0x7f01001c, 
-        0x7f01001d, 0x7f01001e
+        0x7f01001d, 0x7f01001e, 0x7f01001f, 0x7f010020, 
+        0x7f010021
       };
     /**
      * <p>This symbol is the offset where the {@link com.viewpagerindicator.test.R.attr#vpiCirclePageIndicatorStyle}
@@ -956,6 +985,42 @@ public final class R {
      */
     public static final int ViewPagerIndicator_vpiTabPageIndicatorStyle=3;
     /**
+     * <p>This symbol is the offset where the {@link com.viewpagerindicator.test.R.attr#vpiTabPageIndicatorStyle0}
+     * attribute's value can be found in the {@link #ViewPagerIndicator} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.viewpagerindicator.test:vpiTabPageIndicatorStyle0
+     */
+    public static final int ViewPagerIndicator_vpiTabPageIndicatorStyle0=4;
+    /**
+     * <p>This symbol is the offset where the {@link com.viewpagerindicator.test.R.attr#vpiTabPageIndicatorStyle1}
+     * attribute's value can be found in the {@link #ViewPagerIndicator} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.viewpagerindicator.test:vpiTabPageIndicatorStyle1
+     */
+    public static final int ViewPagerIndicator_vpiTabPageIndicatorStyle1=5;
+    /**
+     * <p>This symbol is the offset where the {@link com.viewpagerindicator.test.R.attr#vpiTabPageIndicatorStyle2}
+     * attribute's value can be found in the {@link #ViewPagerIndicator} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.viewpagerindicator.test:vpiTabPageIndicatorStyle2
+     */
+    public static final int ViewPagerIndicator_vpiTabPageIndicatorStyle2=6;
+    /**
      * <p>This symbol is the offset where the {@link com.viewpagerindicator.test.R.attr#vpiTitlePageIndicatorStyle}
      * attribute's value can be found in the {@link #ViewPagerIndicator} array.
      *
@@ -966,7 +1031,7 @@ public final class R {
      *
      * @attr name com.viewpagerindicator.test:vpiTitlePageIndicatorStyle
      */
-    public static final int ViewPagerIndicator_vpiTitlePageIndicatorStyle=4;
+    public static final int ViewPagerIndicator_vpiTitlePageIndicatorStyle=7;
     /**
      * <p>This symbol is the offset where the {@link com.viewpagerindicator.test.R.attr#vpiUnderlinePageIndicatorStyle}
      * attribute's value can be found in the {@link #ViewPagerIndicator} array.
@@ -978,6 +1043,6 @@ public final class R {
      *
      * @attr name com.viewpagerindicator.test:vpiUnderlinePageIndicatorStyle
      */
-    public static final int ViewPagerIndicator_vpiUnderlinePageIndicatorStyle=5;
+    public static final int ViewPagerIndicator_vpiUnderlinePageIndicatorStyle=8;
   }
 }

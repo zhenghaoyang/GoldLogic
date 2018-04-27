@@ -4,12 +4,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
     <com.goldlogic.jiadianxi.ui.WrapContentListView
-        android:id="@+id/lv_product_list_super"
+        android:id="@+id/f_listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="@null"></com.goldlogic.jiadianxi.ui.WrapContentListView>
-
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="@dimen/divider"
+        android:listSelector="@android:color/transparent" />
 </LinearLayout>
-

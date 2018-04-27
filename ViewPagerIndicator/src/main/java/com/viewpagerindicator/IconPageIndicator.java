@@ -17,6 +17,9 @@
 package com.viewpagerindicator;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
@@ -50,7 +53,9 @@ public class IconPageIndicator extends HorizontalScrollView implements PageIndic
         setHorizontalScrollBarEnabled(false);
 
         mIconsLayout = new IcsLinearLayout(context, R.attr.vpiIconPageIndicatorStyle);
+
         addView(mIconsLayout, new LayoutParams(WRAP_CONTENT, FILL_PARENT, Gravity.CENTER));
+//        addView(R.drawable.tab3, new LayoutParams(WRAP_CONTENT, FILL_PARENT, Gravity.CENTER));
     }
 
     private void animateToIcon(final int position) {
@@ -128,14 +133,23 @@ public class IconPageIndicator extends HorizontalScrollView implements PageIndic
         mIconsLayout.removeAllViews();
         IconPagerAdapter iconAdapter = (IconPagerAdapter) mViewPager.getAdapter();
         int count = iconAdapter.getCount();
-        for (int i = 0; i < count; i++) {
-            ImageView view = new ImageView(getContext(), null, R.attr.vpiIconPageIndicatorStyle);
-            view.setImageResource(iconAdapter.getIconResId(i));
-            mIconsLayout.addView(view);
-        }
+//        for (int i = 0; i < count; i++) {
+//            ImageView view = new ImageView(getContext(), null, R.attr.vpiIconPageIndicatorStyle);
+//            view.setImageResource(iconAdapter.getIconResId(i));
+//            mIconsLayout.addView(view);
+//        }
+
+        Resources res = getResources();
+        Bitmap bmp = BitmapFactory.decodeResource(res, R.drawable.tab3);
+        ImageView view = new ImageView(getContext());
+        view.setImageBitmap(bmp);
+        mIconsLayout.addView(view);
         if (mSelectedIndex > count) {
             mSelectedIndex = count - 1;
         }
+
+
+
         setCurrentItem(mSelectedIndex);
         requestLayout();
     }

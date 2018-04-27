@@ -4,6 +4,48 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/banner_background"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="加点息"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_bg"
+            android:gravity="center"
+            android:textColor="#8a8a8a" />
+
+        <ImageView
+
+            android:id="@+id/iv_serach"
+            android:layout_width="16dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/search" />
+
+
+    </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -13,51 +55,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <!---->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="178dp"
-                android:background="@mipmap/banner"
+                android:layout_height="134dp"
+                android:background="@color/white"
                 android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="44dp"
-                    android:background="@drawable/banner_background"
-                    android:focusable="true"
-                    android:focusableInTouchMode="true"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/tv_title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginRight="18dp"
-                        android:gravity="center"
-                        android:text="加点息"
-                        android:textColor="@color/white"
-                        android:textSize="18sp" />
-
-                    <EditText
-                        android:id="@+id/tv_search"
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/shape_bg"
-                        android:gravity="center"
-                        android:text=""
-                        android:textColor="#8A8A8A" />
-
-                    <ImageView
-                        android:id="@+id/iv_serach"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_margin="10dp"
-                        android:src="@mipmap/search" />
-
-                </LinearLayout>
-                <!--Banner-->
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="133dp">
@@ -65,13 +70,25 @@
                     <com.youth.banner.Banner
                         android:id="@+id/banner"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+                        android:layout_height="match_parent">
+
+                        <EditText
+                            android:id="@+id/tv_search"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_bg"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="#8A8A8A" />
+                    </com.youth.banner.Banner>
                 </FrameLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="77dp">
+                android:layout_height="77dp"
+                android:background="@color/white">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -82,8 +99,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
+                        android:layout_width="39dp"
+                        android:layout_height="39dp"
                         android:layout_gravity="center"
                         android:padding="5dp"
                         android:src="@mipmap/activity" />
@@ -146,6 +163,11 @@
                 </LinearLayout>
             </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#8A8A8A"></View>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -174,6 +196,12 @@
                         android:text="1000"
                         android:textColor="#cc000000" />
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="#bcafaf"></LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -242,12 +270,19 @@
                     android:background="@drawable/tab_indicator_background"></com.viewpagerindicator.TabPageIndicator>
 
 
-                <android.support.v4.view.ViewPager
+                <!--<com.goldlogic.jiadianxi.ui.WrapContentViewPager
                     android:id="@+id/vp_invest"
                     android:layout_width="match_parent"
-                    android:layout_height="1000dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:background="@color/white"></android.support.v4.view.ViewPager>
+                    android:background="@color/white" />-->
+
+                <com.goldlogic.jiadianxi.ui.WrapContentViewPager
+                    android:id="@+id/vp_invest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@color/white" />
             </LinearLayout>
         </LinearLayout>
 

@@ -1,3 +1,4 @@
+/*
 package com.goldlogic.jiadianxi.subFragment;
 
 import android.os.Bundle;
@@ -20,10 +21,13 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
+*/
 /**
  * Created by Administrator on 2018/3/22.
- */
-//* ListView的使用：①ListView ②BaseAdapter ③Item Layout ④集合数据 (联网获取数据）
+ *//*
+
+/*/
+/* ListView的使用：①ListView ②BaseAdapter ③Item Layout ④集合数据 (联网获取数据）
 public class ProductListFragment extends BaseFragment {
 
 
@@ -105,3 +109,4 @@ public class ProductListFragment extends BaseFragment {
 
 
 }
+*/

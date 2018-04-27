@@ -46,10 +46,13 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         ButterKnife.bind(this);
         //默认选择第一个页面
         setSelect(0);
+
+
     }
 
     @Override

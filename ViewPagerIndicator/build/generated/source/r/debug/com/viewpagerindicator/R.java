@@ -37,8 +37,11 @@ public final class R {
         public static int vpiIconPageIndicatorStyle = 0x7f04001b;
         public static int vpiLinePageIndicatorStyle = 0x7f04001c;
         public static int vpiTabPageIndicatorStyle = 0x7f04001d;
-        public static int vpiTitlePageIndicatorStyle = 0x7f04001e;
-        public static int vpiUnderlinePageIndicatorStyle = 0x7f04001f;
+        public static int vpiTabPageIndicatorStyle0 = 0x7f04001e;
+        public static int vpiTabPageIndicatorStyle1 = 0x7f04001f;
+        public static int vpiTabPageIndicatorStyle2 = 0x7f040020;
+        public static int vpiTitlePageIndicatorStyle = 0x7f040021;
+        public static int vpiUnderlinePageIndicatorStyle = 0x7f040022;
     }
     public static final class bool {
         public static int default_circle_indicator_centered = 0x7f050001;
@@ -84,13 +87,14 @@ public final class R {
         public static int default_title_indicator_top_padding = 0x7f08000d;
     }
     public static final class drawable {
-        public static int vpi__tab_indicator = 0x7f090001;
-        public static int vpi__tab_selected_focused_holo = 0x7f090002;
-        public static int vpi__tab_selected_holo = 0x7f090003;
-        public static int vpi__tab_selected_pressed_holo = 0x7f090004;
-        public static int vpi__tab_unselected_focused_holo = 0x7f090005;
-        public static int vpi__tab_unselected_holo = 0x7f090006;
-        public static int vpi__tab_unselected_pressed_holo = 0x7f090007;
+        public static int tab3 = 0x7f090001;
+        public static int vpi__tab_indicator = 0x7f090002;
+        public static int vpi__tab_selected_focused_holo = 0x7f090003;
+        public static int vpi__tab_selected_holo = 0x7f090004;
+        public static int vpi__tab_selected_pressed_holo = 0x7f090005;
+        public static int vpi__tab_unselected_focused_holo = 0x7f090006;
+        public static int vpi__tab_unselected_holo = 0x7f090007;
+        public static int vpi__tab_unselected_pressed_holo = 0x7f090008;
     }
     public static final class id {
         public static int bottom = 0x7f0c0001;
@@ -154,12 +158,15 @@ public final class R {
         public static int UnderlinePageIndicator_fadeLength = 2;
         public static int UnderlinePageIndicator_fades = 3;
         public static int UnderlinePageIndicator_selectedColor = 4;
-        public static int[] ViewPagerIndicator = { 0x7f04001a, 0x7f04001b, 0x7f04001c, 0x7f04001d, 0x7f04001e, 0x7f04001f };
+        public static int[] ViewPagerIndicator = { 0x7f04001a, 0x7f04001b, 0x7f04001c, 0x7f04001d, 0x7f04001e, 0x7f04001f, 0x7f040020, 0x7f040021, 0x7f040022 };
         public static int ViewPagerIndicator_vpiCirclePageIndicatorStyle = 0;
         public static int ViewPagerIndicator_vpiIconPageIndicatorStyle = 1;
         public static int ViewPagerIndicator_vpiLinePageIndicatorStyle = 2;
         public static int ViewPagerIndicator_vpiTabPageIndicatorStyle = 3;
-        public static int ViewPagerIndicator_vpiTitlePageIndicatorStyle = 4;
-        public static int ViewPagerIndicator_vpiUnderlinePageIndicatorStyle = 5;
+        public static int ViewPagerIndicator_vpiTabPageIndicatorStyle0 = 4;
+        public static int ViewPagerIndicator_vpiTabPageIndicatorStyle1 = 5;
+        public static int ViewPagerIndicator_vpiTabPageIndicatorStyle2 = 6;
+        public static int ViewPagerIndicator_vpiTitlePageIndicatorStyle = 7;
+        public static int ViewPagerIndicator_vpiUnderlinePageIndicatorStyle = 8;
     }
 }

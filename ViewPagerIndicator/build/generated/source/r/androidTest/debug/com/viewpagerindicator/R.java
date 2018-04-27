@@ -37,8 +37,11 @@ public final class R {
         public static final int vpiIconPageIndicatorStyle = 0x7f01001a;
         public static final int vpiLinePageIndicatorStyle = 0x7f01001b;
         public static final int vpiTabPageIndicatorStyle = 0x7f01001c;
-        public static final int vpiTitlePageIndicatorStyle = 0x7f01001d;
-        public static final int vpiUnderlinePageIndicatorStyle = 0x7f01001e;
+        public static final int vpiTabPageIndicatorStyle0 = 0x7f01001d;
+        public static final int vpiTabPageIndicatorStyle1 = 0x7f01001e;
+        public static final int vpiTabPageIndicatorStyle2 = 0x7f01001f;
+        public static final int vpiTitlePageIndicatorStyle = 0x7f010020;
+        public static final int vpiUnderlinePageIndicatorStyle = 0x7f010021;
     }
     public static final class bool {
         public static final int default_circle_indicator_centered = 0x7f020000;
@@ -84,13 +87,14 @@ public final class R {
         public static final int default_title_indicator_top_padding = 0x7f04000c;
     }
     public static final class drawable {
-        public static final int vpi__tab_indicator = 0x7f050000;
-        public static final int vpi__tab_selected_focused_holo = 0x7f050001;
-        public static final int vpi__tab_selected_holo = 0x7f050002;
-        public static final int vpi__tab_selected_pressed_holo = 0x7f050003;
-        public static final int vpi__tab_unselected_focused_holo = 0x7f050004;
-        public static final int vpi__tab_unselected_holo = 0x7f050005;
-        public static final int vpi__tab_unselected_pressed_holo = 0x7f050006;
+        public static final int tab3 = 0x7f050000;
+        public static final int vpi__tab_indicator = 0x7f050001;
+        public static final int vpi__tab_selected_focused_holo = 0x7f050002;
+        public static final int vpi__tab_selected_holo = 0x7f050003;
+        public static final int vpi__tab_selected_pressed_holo = 0x7f050004;
+        public static final int vpi__tab_unselected_focused_holo = 0x7f050005;
+        public static final int vpi__tab_unselected_holo = 0x7f050006;
+        public static final int vpi__tab_unselected_pressed_holo = 0x7f050007;
     }
     public static final class id {
         public static final int bottom = 0x7f060000;
@@ -154,12 +158,15 @@ public final class R {
         public static final int UnderlinePageIndicator_fadeLength = 2;
         public static final int UnderlinePageIndicator_fades = 3;
         public static final int UnderlinePageIndicator_selectedColor = 4;
-        public static final int[] ViewPagerIndicator = { 0x7f010019, 0x7f01001a, 0x7f01001b, 0x7f01001c, 0x7f01001d, 0x7f01001e };
+        public static final int[] ViewPagerIndicator = { 0x7f010019, 0x7f01001a, 0x7f01001b, 0x7f01001c, 0x7f01001d, 0x7f01001e, 0x7f01001f, 0x7f010020, 0x7f010021 };
         public static final int ViewPagerIndicator_vpiCirclePageIndicatorStyle = 0;
         public static final int ViewPagerIndicator_vpiIconPageIndicatorStyle = 1;
         public static final int ViewPagerIndicator_vpiLinePageIndicatorStyle = 2;
         public static final int ViewPagerIndicator_vpiTabPageIndicatorStyle = 3;
-        public static final int ViewPagerIndicator_vpiTitlePageIndicatorStyle = 4;
-        public static final int ViewPagerIndicator_vpiUnderlinePageIndicatorStyle = 5;
+        public static final int ViewPagerIndicator_vpiTabPageIndicatorStyle0 = 4;
+        public static final int ViewPagerIndicator_vpiTabPageIndicatorStyle1 = 5;
+        public static final int ViewPagerIndicator_vpiTabPageIndicatorStyle2 = 6;
+        public static final int ViewPagerIndicator_vpiTitlePageIndicatorStyle = 7;
+        public static final int ViewPagerIndicator_vpiUnderlinePageIndicatorStyle = 8;
     }
 }
